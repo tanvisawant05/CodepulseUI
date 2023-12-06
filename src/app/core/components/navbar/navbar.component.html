@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Code pulse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <div class="x"> 
+          <button class="dropbtn" (click)="toggleDropdown()" (mouseenter)="showDropdown()" (mouseleave)="hideDropdown()">
+            Admin<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" [ngClass]="{'show': dropdownOpen}" (mouseenter)="showDropdown()"
+            (mouseleave)="hideDropdown()">
+            <!-- <a href="/admin/categories">Categories</a> -->
+            <a routerLink="admin/categories">Categories</a>
+        </div>
+      </div>
+      </ul>
+      </div>
+    </div>
+  </nav>
